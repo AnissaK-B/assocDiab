@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Accueil - Association Diabète</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Association Diabète</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="recherche.html">Recherche</a></li>
+                <li><a href="contact.html">Nous Contacter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Contenu de la page d'accueil ici -->
+    </main>
+    <footer>
+        <!-- Pied de page ici -->
+    </footer>
+</body>
+</html>
+
+
+.image-container {
+  max-width: 100%; /* L'image ne sera pas plus large que son conteneur parent */
+  text-align: center; /* Centre l'image horizontalement */
+}
+.image-container img {
+  max-width: 100%; /* L'image ne dépassera pas la largeur de son conteneur */
+  height: auto; /* Ajuste automatiquement la hauteur pour conserver les proportions de l'image */
+  display: inline-block; /* Garde l'image centrée verticalement */
+}
+/*section2*/
+.container {
+}
+
+
+.prevent,
+.grid,
+.absolute {
+  padding: 36px;
+  margin-top: 37px;
+  min-height: 150px;
+}
+
+.prevent ul {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.prevent img {
+  width: 300px;
+  height: auto;
+}
+
+.prevent li {
+  list-style: none;
+  height: 160px;
+  width: 300px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.image-hover {
+  width: 70px;
+  height: auto;
+  transition: transform 0.3s ease-out;
+}
+
+.image-hover:hover {
+  transform: scale(1.2);
+}
+   <section2>
+            <div class="section2">
+               
+                <img src="imgages/traitements-du-diabète-de-type-2.jpeg" alt="">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores perspiciatis adipisci commodi
+                    necessitatibus error ut recusandae consectetur velit, unde iure aspernatur nulla asperiores,
+                
+                </p>
+            </div>
+            <div class="prevent">
+                <ul>
+                    <li>
+                        <a href="#alimentation">
+                            <img src="images/ensemble.jpg" alt="Image" class="image-hover">
+                            <span>Je suis ce que je mange!</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#sport">
+                            <img src="img/pexels-photo-601177.jpeg" alt="Image" class="image-hover">
+                            <span>Bien dans ses baskets !</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#hygienedevie">
+                            <img src="img/pexels-photo-533360.jpeg" alt="Image" class="image-hover">
+                            <span>Hygiène de vie, une habitude!</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div>
+                    <h6 id="alimentation"> Une bonne hygiène alimentaire.</h6>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum ad quasi laboriosam
+                        adipisci
+
+
+                        ?</p>
+                    <h6 id="sport">Des exercices physiques.</h6>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum ad quasi laboriosam
+                        adipisci
+                        quisquam explicabo numquam molestiae ratione? Ex similique sed provident quasi saepe dolore
+                        blanditiis vero. Amet doloremque obcaecati rem quaerat?</p>
+                    <h6 id="hygienedevie">Des habitudes de vie saines.</h6>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum ad quasi laboriosam
+                        adipisci
+                        qi et
+                        neque, ratione cum, blanditiis vero. Amet doloremque obcaecati rem quaerat?</p>
+
+                </div>
+            </div>
+        </section2>
+#03045e
+#caf0f8

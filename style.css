@@ -1,0 +1,515 @@
+/* Réinitialisation du navigateur */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+/* Styles généraux */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dad7cd;
+}
+header,
+nav {
+  display: none;
+}
+.logo {
+  font-size: 24px;
+}
+@media screen and (min-width: 824px) {
+  .header {
+    width: 100%;
+    background-color: #284b63;
+    color: #f0ebd8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* Afficher la navigation lorsque l'écran est suffisamment large */
+  nav {
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: space-around;
+    margin-right: 10px;
+    list-style: none;
+    align-items: center;
+  }
+  .don{
+   background-color:#e9c46a ;
+   color :#023e8a;
+   padding: 10px;
+   font-weight: bold;
+
+  }
+  li {
+    font-size: 1rem;
+    margin-right: 30px;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: #f0ebd8;
+    text-decoration: none;
+  }
+ 
+ 
+  }
+
+/*Header*/
+
+/* accueil */
+
+body > button {
+  position: relative;
+  padding: 12px;
+  background-color: #489fb5;
+  left: 80%;
+  top: 20px;
+  margin: 20px;
+}
+
+/* Style pour le bouton */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #3c6e71;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+/* Style pour le bouton au survol */
+
+
+.page-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#carrousel {
+  font-family: "Lato", sans-serif;
+  width: 80%;
+  overflow: hidden;
+}
+
+.images {
+  display: flex;
+  animation-duration: 5s;
+  animation-name: mesImages;
+  animation-iteration-count: infinite;
+}
+@keyframes mesImages {
+  0% {
+    transform: translateX(0);
+  }
+
+  25% {
+    transform: translateX(-25%);
+  }
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide1,
+.slide2,
+.slide3 {
+  position: relative;
+}
+
+.slide1 p {
+  position: absolute;
+  top: 80px; /* Ajustez la valeur en fonction de la position verticale souhaitée */
+  left: 20px; /* Ajustez la valeur en fonction de la position horizontale souhaitée */
+  color: #f0ebd8;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+button {
+  background-color: #489fb5; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  border: 2px solid #489fb5; /* Bordure */
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Ombre */
+}
+
+button:hover {
+  background-color: #023e8a;
+  cursor: pointer;
+}
+.slide1 button {
+  position: absolute;
+  bottom: 160px; /* Ajustez la valeur en fonction de la position verticale souhaitée */
+  right: 80px; /* Ajustez la valeur en fonction de la position horizontale souhaitée */
+}
+.gras {
+  color: #284b63;
+  font-weight: bold;
+}
+.slide2 p {
+  position: absolute;
+  top: 130px; /* Ajustez la valeur en fonction de la position verticale souhaitée */
+  left: 20px; /* Ajustez la valeur en fonction de la position horizontale souhaitée */
+  color: #eceef7d5;
+  font-size: 1.5rem;
+}
+.slide2 .gras {
+  font-size: 2.5rem;
+  color: #16697a;
+  font-weight: bold;
+}
+.slide3 p {
+  position: absolute;
+  top: 200px; /* Ajustez la valeur en fonction de la position verticale souhaitée */
+  left: 20px; /* Ajustez la valeur en fonction de la position horizontale souhaitée */
+  font-size: 2 rem;
+  font-weight: bold;
+  color:#023e8a;
+}
+.slide3 button {
+  position: absolute;
+  top: 50px; /* Ajustez la valeur en fonction de la position verticale souhaitée */
+  right: 80px; /* Ajustez la valeur en fonction de la position horizontale souhaitée */
+}
+.diab-nutr img,
+.ws-foot-care img,
+.forum img {
+  width: 60%;
+}
+
+.encadré{
+  width:20 px;
+  background-color: #e9c46a;
+  margin-top: 30px;
+  margin-bottom:30px;
+  margin-right: 50%;
+  padding :15px;
+  font-size: 18px;
+  color:#023e8a
+}
+
+
+.association button{
+ margin-left:24%;
+ margin-top:5px;
+}
+.association h4{
+  margin-left:10%;
+  margin-top:100px;
+  font-size: 2.5em;
+  color:#023e8a
+ }
+ 
+
+
+/* section events*/
+
+ h1 {
+  font-size: 1.5 em;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  margin-left: 12px;
+  margin-right: 20px;
+  color:#023e8a
+
+}
+
+.page-home   h2{
+  font-size: 0.5 em;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  color:#023e8a
+
+}
+h3 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  font-size: 2.5rem;
+}
+
+
+ p{
+font-size:10 em;
+color:#023e8a;
+margin-right: 20%;
+}
+
+ .next-events {
+    align-items: center;
+    display: flex;
+    background: #e9c46a;
+    width:100%;
+    margin:auto;
+  }
+
+
+
+.forum h4,
+.ws-foot-care h4,
+.diab-nutr h4 {
+font-size:1.5 em;
+text-transform: uppercase;
+margin: 10px;
+font-weight: bold;
+color:#eceef7d5;
+}
+
+.forum p,
+.ws-foot-care p,
+.diab-nutr p
+ {
+ font-size:10 em;
+ margin: 10px;
+ color:#eceef7d5;
+}
+
+
+.missions{
+ 
+  display: flex;
+  margin-top: 150px;
+  justify-content: column;
+  align-items: center;
+  padding: 50px;
+  width:75%;
+  margin: auto;
+  opacity: 0.81;
+
+}
+.mission1{
+
+  display: flex;
+
+}
+
+.mission2{
+
+  display: flex;
+}
+
+.pedia{
+  background-color: #94d2bd;
+  text-align: center;
+   color:white;
+   padding: 30px;
+  
+}
+.fam-accomp{
+  background-color: #ca6702;
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+  color:white;
+  opacity: 0.5;
+}
+
+.fam-sejour{
+  background-color: #9b2226;
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+  opacity: 0.5;
+  color:white;
+}
+
+.fam-region{
+  background-color: rgba(2, 61, 138, 0.568);
+ 
+  margin: 30px;
+  padding: 20px;
+  text-align: center;
+  color:white;
+}
+.donnateurs{
+  background-color: #005f73;
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+  opacity: 0.5;
+  color:white;
+}
+
+.projets{
+  background-color: #023e8a;
+  margin: 30px;
+  padding: 30px;
+  text-align: center;
+  color:white;
+  opacity: 0.5;
+  
+}
+.pedia .bold,
+.fam-accomp .bold,
+.fam-region .bold,
+.donnateurs .bold,
+.fam-sejour .bold,
+.projets .bold {
+  font-weight: bold;
+  font-size: 3em;
+  border-radius: 30px;
+}
+
+.pedia ,
+.fam-accomp ,
+.fam-region ,
+.donnateurs,
+.fam-sejour,
+.projets {
+  font-weight: bold;
+  font-size: 3em;
+  border-radius: 30px;
+
+}
+
+/*section actualites*/
+
+.actualites{
+  background-color: #e9d8a6;
+  width:75%;
+  margin:auto;
+}
+
+ h4{
+  margin-left:15%;
+  margin-top:45px;
+  font-size: 2.5em;
+  color:#023e8a
+ }
+ 
+
+
+
+
+
+@media screen and (min-width: 524px) {
+  h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+       padding-top: 20px;
+    margin-bottom: 35px;
+    margin-top: 60px;
+  }
+
+  h2{
+    margin-bottom: 10px;
+    margin-top: 80px;
+    padding-top: 10px;
+    font-size: 2.5rem;
+
+  }
+  h3 {
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    margin-top: 80px;
+    padding-top: 10px;
+    font-size: 2.5rem;
+  }
+  h4 {
+    margin: 20px;
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 1.5em;
+    margin: 10px;
+  }
+  .next-events {
+    align-items: center;
+    display: flex;
+    background: #f0ebd8;
+   
+    width:60%;
+    margin:auto
+  }
+  
+
+
+  .events {
+   
+    background: #d3e1e2;
+    display: flex;
+    margin-top: 100px;
+    justify-content: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+ 
+
+    .next-events {
+      align-items: center;
+      display: flex;
+      background: #f0ebd8;
+      width: 80%;
+      margin: auto;
+      margin-top: 50px;
+  }
+  
+
+  
+  .forum {
+    background: #1e656d;
+    width: 80%;
+    padding: 10px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .ws-foot-care {
+    background: #1e656d;
+    width: 80%;
+    padding: 10px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .diab-nutr {
+    background: #1e656d;
+    width: 80%;
+    padding: 10px;
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Utilise la hauteur de la fenêtre pour centrer verticalement */
+  text-align: center;
+}
+.forum p,
+.ws-foot-care p,
+.diab-nutr p {
+  font-size: 1em;
+ 
+  margin: 10px;
+}
