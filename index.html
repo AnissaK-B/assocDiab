@@ -4,28 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <script src="https://kit.fontawesome.com/2e6eb6e189.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha384-ezQRj0PiflLIxV3z0DrCInMXc2H4YkeJY6NjjRYZNhT6Vg2d5SxKbe5PA8A2AVPA" crossorigin="anonymous">
+    <title> Bienvenue sur le site de l'association Diab'Aide</title>
 
-    <title>Home</title>
     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
 </head>
 
 <body>
 
     <header class="header">
-        <a href="#" class="logo">Diab'Aide</a>
-
+        <a href="#" class="logo">Diab'Aide <i class="fa-solid fa-handshake"></i></a>
+       
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a-propos.html">A propos</a></li>
                 <li><a href="actualites.html">Actualités</a></li>
-                <li><a href="recherche.html">Recherche</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <div id="icons"></div>
             </ul>
-            <ul>
-                <li><a class="don" href="contact.html">Faites un don</a></li>
+             <ul>
+                <li><a class="don" onclick="togglePopup()">Faites un don<i class="fa-solid fa-hand-holding"></i></a></li>
             </ul>
+        
         </nav>
     </header>
 
@@ -35,16 +39,17 @@
                 <div class="images">
                     <div class="slide1">
                         <img src="images/diabete1.jpg" alt="image de couverture">
-                        <p>Vivre avec le diabète est un défi de chaque instant!<span class="gras"> DIABE'Aide</span> vous
+                        <p class="p">Vivre avec le diabète est un défi de chaque instant!<span class="gras"> DIABE'Aide</span> vous
                             informe</p>
                         <button>Rejoignez-nous</button>
                     </div>
 
                     <div class="slide2">
-                        <img class="image" src="images/sport2.jpg" alt="image de couverture">
+                        <img class="image" src="images/imageslide.jpg" width="617px"  alt="image de couverture">
+                        
                         <p><span class="uppercase">Recevez gratuitement</span> nos courriers et nos brochures d'information
                             pour vous sentir épaulés dans la gestion de votre diabète</p>
-
+                           
                     </div>
 
                     <div class="slide3">
@@ -52,19 +57,46 @@
                         <p><span class="gras">Diab'Aide </span>soutient les chercheurs en diabétologie parmi les
                             meilleurs et les plus brillants de France
                         </p>
-                        <button>Faites un don</button>
+                       
                     </div>
                     </div>
-                <button><a href="#">Cliquez-ici</a></button>
-                <p class="encadré">Nous sommes joignables par téléphone le matin entre 9h00 et 12h30.</p>
+                    <a href="contact.html">
+                        <button>Contactez-nous<i class="fa-solid fa-right-long"></i></button>
+                    </a>
+                <p class="encadré">Nous sommes aussi joignables par téléphone 24h/24, en cas d'urgence le 31/31.</p>
                 <h1>L'Association <span class="gras"> Diab'Aide </span>reunit les personnes diabetiques et soignants , unis face a la maladie  </h1>
-                <p>Vous êtes touché par le diabète ? Vous êtes professionnel de la santé ? Rejoignez-nous.
-                    Nous offrons à nos membres des activités, des rencontres, conférences et formations, de l’information pointue et accessible, pratique et positive.</p>
+                
                 </div>
-              
-        </section>
+             
+                <div id="popup-overlay" >
+                    <div class="popup-content">
+                    <h2>Formulaire de Paiement</h2>
+                    <form>
+                        <label for="cardNumber">Nom</label>
+                        <input type="text" id="name" name="name">
+                
+                    
+                        <label for="cardNumber">Numéro de carte de crédit:</label>
+                        <input type="text" id="cardNumber" name="cardNumber">
+                
+                        <label for="expiryDate">Date d'expiration:</label>
+                        <input type="text" id="expiryDate" name="expiryDate">
+                
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv">
+                
+                        <button type="submit">Payer</button>
+                    </form>
+                    <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">fermer</a>
+                    </div>
+                </div>
+                 </section>
         <div class="association">
-        <button>L'association-------</button>  
+            <p>Vous êtes touché par le diabète ? Vous êtes professionnel de la santé ? Rejoignez-nous.
+                Nous offrons à nos membres des activités, des rencontres, conférences et formations, de l’information pointue et accessible, pratique et positive.</p>
+            <a href="a-propos.html">
+                <button>L'association <i class="fa-solid fa-right-long"></i></button>
+              </a>
         <h4>Nos missions</h4>
         </div>
         <section>
@@ -73,110 +105,177 @@
                     <h4>Accompagner</h4>
                     <img src="images/soutien.jpg" alt="">
                    
-                    <p>via une information
-                        actualisée, des outils
-                        adaptés et un soutien durable personnalisé Les effets du diabète ne sont pas que physiques. Cette maladie n’est pas comme les autres, silencieuse et insidieuse, elle avance masquée et n’épargne personne : vous, moi, nos proches. Heureusement, plus tôt le diabète est dépisté, meilleure sera l'évolution. Ne laissez pas le diabète vous prendre par surprise. Prenez-le de vitesse !</p>
+                    <p>À travers notre association, nous nous engageons à fournir 
+                        une assistance complète aux personnes touchées par le diabète en mettant
+                         à leur disposition des informations actualisées, des outils adaptés, 
+                         et un soutien durable personnalisé. Le diabète, bien plus qu'une maladie physique, 
+                         affecte également le bien-être émotionnel et mental. Conscient de cette réalité, notre
+                          approche holistique vise à aborder les dimensions physiques, émotionnelles et sociales de la maladie. Notre mission est de sensibiliser 
+                          à la nécessité d'un dépistage précoce, pour de meilleures sont les perspectives d'évolution. !</p>
                 </div>
                 <div class="ws-foot-care">
                     <h4>Eduquer</h4>
                     <img src="images/ensemble.jpg" width="100px" alt="">
                   
-                    <p>Pour mieux vivre le diabète
-                        à travers l’éducation
-                        thérapeutique et l’organisation de séjours médico-éducatifs.</p>
+                    <p>L'éducation thérapeutique et l'organisation de séjours médico-éducatifs jouent un rôle crucial
+                         dans l'amélioration de la qualité de vie des personnes atteintes de diabète.Elle vise
+                          à fournir aux patients les connaissances et les compétences nécessaires pour mieux 
+                          comprendre et gérer leur maladie au quotidien. Cela inclut l'apprentissage des
+                           principes de nutrition adaptée, la gestion de la glycémie, l'importance de l'activité physique,
+                         ainsi que la compréhension des médicaments et des complications potentielles.ces initiatives permettent aux individus diabétiques de mieux gérer leur condition, favorisant ainsi une meilleure qualité de vie et une santé globale
+                       </p>
                 </div>
 
                 <div class="diab-nutr">
                     <h4>Soutenir</h4>
                     <img src="images/hopital.jpg" alt="">
                    
-                    <p>Notre association réunit à la fois les intérêts des personnes diabétiques et des professionnels de la santé. Ensemble, ils contribuent à changer le visage du diabèteGrâce à vos dons, DIAB'Aide a pu financer de nombreuses recherches qui ont abouti à des découvertes impactantes pour les personnes atteintes de maladies et pour leurs proches.</p>
+                    <p>Notre association, DIAB'Aide, constitue une plateforme unique qui rassemble les intérêts aussi bien des personnes 
+                        diabétiques que des professionnels de la santé. Cette collaboration harmonieuse vise à transformer de manière significative 
+                        la perception et la gestion du diabète. Grâce à la générosité de vos dons, DIAB'Aide a pu jouer un rôle crucial en finançant diverses 
+                        recherches novatrices.Ces séjours  offrent une expérience immersive, permettant
+                        aux personnes atteintes de diabète de mettre en pratique les enseignements
+                         acquis dans un environnement encadré par des professionnels de la santé.</p>
                 </div>
             </div>
         </section>
-      
+        
         <section class="missions">
+
+            <div class="mission0">
+               <h6>Diab'Aide en quelques chiffres<i class="fa-solid fa-right-long"></i></h6>
+              
+            </div>
          <div class="missions1">
             <div class="pedia">
-                <h5><span class="bold">250</span> services de pediatrie en France </h5>
+                <h6><span class="bold">250</span> services de pediatrie en France </h6>
             </div>
             <div class="fam-accomp">
-                <h5><span class="bold">50 000</span> familles accompagnées depuis 70 ans</h5>
+                <h6><span class="bold">50 000</span> familles accompagnées depuis 70 ans</h6>
             </div>
             <div class="fam-sejour">
-                <h5><span class="bold">1200</span> enfants accueillis chaque année en séjours SSR </h5>
+                <h6><span class="bold">1200</span> enfants accueillis chaque année en séjours SSR </h6>
             </div>
         </div>
             <div class="missions2">
                 <div class="fam-region">
-                    <h5 ><span class="bold">42</span> associations de familles en région</h5>
+                    <h6 ><span class="bold">42</span> associations de familles en région</h6>
                 </div>
                 <div class="donnateurs">
-                    <h5><span class="bold">12 000</span> donateurs actifs sur les cinq dernières années </h5>
+                    <h6><span class="bold">12 000</span> donateurs actifs sur les cinq dernières années </h6>
                 </div> 
                 <div class="projets"> 
-                    <h5><span class="bold">142 000</span> projets soutenus </h5>
+                    <h6><span class="bold">142 000</span> projets soutenus </h6>
                 </div>               
             </div>
      </section>
 
-     <h4>Nos actualités</h4>
-      <section class="actualites">
-        <div class="actu">
+        <section class="actualites">
+            
+        <h4>Nos actualités</h4>
+            <div class="actu">
+                <p>Restez connecté pour être au cœur de l'action au sein de notre association ! Suivez de près les dernières actualités, soyez informé sur les événements à venir qui rythment notre engagement, découvrez des détails sur nos programmes de sensibilisation qui font la différence, plongez-vous dans des histoires inspirantes partagées par les membres engagés de notre communauté, et bien plus encore. Nous sommes ravis de vous offrir une fenêtre sur les moments forts qui façonnent notre association, où l'unité, l'inspiration et le changement positif sont au rendez-vous. 
+                        Restez informé, soyez inspiré et participez à notre mission commune !Votre implication est précieuse, et en restant connecté, vous contribuez à renforcer notre communauté. Ensemble, nous pouvons créer un impact durable et favoriser des changements positifs dans la vie des personnes touchées par le diabète. Restez informé, soyez inspiré et engagez-vous dans notre mission commune pour un avenir où la solidarité et la compréhension sont les piliers de notre lutte contre le diabète.</p>
+                <img src="images/actu.jpg" width="20.25%"  alt="Description of the image">
+                <img src="images/Diabète_final.png" width="20.25%" alt="Description of the image">
+                </div>
+                <a href="actualites.html">
+                    <button>Toutes nos actualités<i class="fa-solid fa-right-long"></i></button>
+                </a>
+                
+                <div class="actu1">
+
+                <div class="bloc-actu1">
+                    <h5>Formation pour les aidants</h5>
+                    <p>En savoir plus<i class="fa-solid fa-right-long" ></i></p>
+                </div>
+            
+                <div class="bloc-actu2">
+                    <h5>Appels à dons </h5>
+                <h6>Donnons-nous les moyens d'agir!</h6>
+                <p>En savoir plus<i class="fa-solid fa-right-long" ></i></p>
+               </div>
         
-          <p>Suivez les dernières actualités de l'association</p>
-          <img src="your_image_path.jpg" alt="Description of the image">
-        </div>
-      
-        <div class="bloc-actu">
-          <div>
-            <h6>Formation pour les aidants</h6>
-            <p>En savoir plus</p>
-            <p></p>
-          </div>
-      
-          <div>
-            <h6>Appels à dons </h6>
-            <p>Donnons-nous les moyens d'agir!</p>
-            <p>En savoir plus</p>
-          </div>
-      
-          <div>
-            <h6>Appels d'offre pour la recherche</h6>
-            <p>Cliquez ici pour télécharger votre dossier à remplir</p>
-            <p>En savoir plus</p>
-          </div>
-      
-          <div>
-            <h6>La vie de l'association en image</h6>
-            <p>Découvrez nos dernières publications</p>
-          </div>
-        </div>
-      </section>
+            
+            <div class="bloc-actu3">
+                <h5>Appels d'offre pour la recherche</h5>
+                <h6>Cliquez ici pour télécharger votre dossier à remplir</h6>
+                <p>En savoir plus<i class="fa-solid fa-right-long" ></i></p>
+            </div>
+        
+            <div class="bloc-actu4">
+                <h5>La vie de l'association en image</h5>
+                <h6>Découvrez nos dernières publications</h6>
+                <p>En savoir plus<i class="fa-solid fa-right-long" ></i></p>
+            </div>
+            </div>
+        </section>
 
-      <button>Toutes nos actualités</button>
-
-
-
+     
     </main>
 
-    <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+   
+
+    <div class="container2">
+        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+            <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
             </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
-          </div>
-      
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
+        </div>
+    
+        
+        <div class="col mb-3">
+            <h5>L'association</h5>
+            <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Accueil</a></li>
+            <li class="nav-item mb-2"><a href="a-propos.html" class="nav-link p-0 text-muted">A propos</a></li>
+            <li class="nav-item mb-2"><a href="actualiteshtml" class="nav-link p-0 text-muted">Actualités</a></li>
+            <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
+           
+          
+            </ul>
+        </div>
+    
+        <div class="col mb-3">
+            <h5>Le diabète</h5>
+            <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Le diabète</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Définition et signes</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Epidémiologie</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">causes</a></li>
+            
+            </ul>
+        </div>
+    
+        <div class="col mb-3">
+            <p><strong>Association Diab'Aide</strong></p>
+            <p><i class="fa-solid fa-location-dot"></i>8 rue du parc 78000</p>
+            <p><i class="fa-solid fa-phone"></i> 68 65 23 65 98</p>
+            <p><i class="fa-solid fa-at"></i>dia02@diabaide.com</p>
+            
+            <ul class="nav justify-content-start border-bottom pb-3 mb-3 nav-social-icons">
+                <li class="ms-3"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li class="ms-3"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="ms-3"><a href="#"><i class="fab fa-facebook"></i></a></li>
+            </ul>
+           
+        </div>
+        
+       
         </footer>
-      </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div>
+        
+                
+    
+       <script src="script.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
+
+
+
+
+
+ 

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/2e6eb6e189.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>A-propos</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Diab'Aide <i class="fa-solid fa-handshake"></i></a>
+    
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="a-propos.html">A propos</a></li>
+                <li><a href="actualites.html">Actualités</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+             <ul>
+                <li id="faire-don"><a class="don" onclick="togglePopup()">Faites un don<i class="fa-solid fa-hand-holding"></i></a></li>
+                 <a href="don.html"></a>
+            </ul>
+        
+        </nav>
+    </header>
+   
+    <div id="popup-overlay" >
+        <div class="popup-content">
+        <h2>Formulaire de Paiement</h2>
+        <form>
+            <label for="cardNumber">Nom</label>
+            <input type="text" id="name" name="name">
+    
+        
+            <label for="cardNumber">Numéro de carte de crédit:</label>
+            <input type="text" id="cardNumber" name="cardNumber">
+    
+            <label for="expiryDate">Date d'expiration:</label>
+            <input type="text" id="expiryDate" name="expiryDate">
+    
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv">
+    
+            <button type="submit">Payer</button>
+        </form>
+        <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">fermer</a>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h2 class="titre-association">Notre association</h2>
+        <p class="texte-association">Le projet est né de la volonté de sortir les enfants de l’hôpital et de développer l’éducation. En 2000, voulant étendre l’aide, non seulement à l’organisation de séjours mais aussi à celle posée par la scolarité et l’orientation professionnelle, médecins et familles fondent l’association. Le projet était alors de permettre aux jeunes d’avoir plus de liberté dans leur vie quotidienne et plus d’autonomie dans la gestion de leur traitement afin d’améliorer leur qualité de vie. Ceci nécessitait une meilleure compréhension de la maladie grâce au partage du savoir médical et scientifique.</p>
+        <div class="row row-cols-1 row-cols-md-4 g-4 py-5">
+
+            <div class="col">
+                <div class="card">  
+                    <div class="card-body">
+                        <h5 class="card-title">Diab'Aide</h5>
+                        <img src="images/forum.jpg" class="card-img-top" alt="...">
+                        <p class="card-text">
+                            Le projet est né de la volonté de sortir les enfants de l’hôpital ,de leur permettre d’avoir
+                            plus de liberté dans leur vie quotidienne et plus d’autonomie dans la gestion de leur traitement pour améliorer leur qualité de vie.</p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                
+                        <button class="btn btn-primary">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">  
+                    <div class="card-body">
+                        <h5 class="card-title">Nos actions</h5>
+                        <img src="images/medecin-et-enfant.jpg" class="card-img-top" alt="...">
+                        <p class="card-text">La survenue du diabète chez un enfant ou un adolescent ne peut être vécue comme une situation banale. nos actions s'articulent autour d'un soutien psychologique, une médiationainsi que  integration de séjours médicaux-educatifs</p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                
+                        <button class="btn btn-primary">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">  
+                    <div class="card-body">
+                        <h5 class="card-title">Nos actualités</h5>
+                        <img src="images/enfants.jpg" class="card-img-top" alt="...">
+                        <p class="card-text"> Consernent les catalogues des sejours d'été, les formations pour les aidants les appels à dons, les appels d'offres pour la recherche.
+                            Vous pouvez consulter ces informations sur la page actualités</p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                    <button class="btn btn-primary">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card">  
+                    <div class="card-body">
+                        <h5 class="card-title">La recherche et nous</h5>
+                        <img src="images/recherche.jpg" class="card-img-top" alt="...">
+                        <p class="card-text"> Grâce à vous,
+                            c’est 12 000 donateurs actifs 
+                        qui  poursuivent leur contribution aux progrès de la recherche sur le diabète et un   accompagnement
+                            des enfants et leurs familles pour une qualité de vie améliorée</p>
+                    </div>
+                    <div class="mb-5 d-flex justify-content-around">
+                
+                        <button class="btn btn-primary">En savoir plus</button>
+                    </div>
+                </div>
+            </div>
+        
+            </div>
+
+
+        </div>
+        
+        <section class="soutien">
+            
+            <h2>Soutenir Diab'Aide, peut se faire de plusieurs manières</h2>
+
+            
+
+            <a href="contact.html"><button>Devenir adhérent</button></a>
+          
+            <a href="contact.html"><button>Devenir bénévole</button></a>
+
+            <ul>
+                <li><a class="don soutien-don" href="#faire-don" onclick="togglePopup()">Devenir donnateur</a></li>
+            </ul>
+
+        </section>
+
+
+
+
+
+        <div class="container2">
+            <footer class=" footer row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+            <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+            </div>
+        
+            
+            <div class="col mb-3">
+                <h5>L'association</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Accueil</a></li>
+                <li class="nav-item mb-2"><a href="a-propos.html" class="nav-link p-0 text-muted">A propos</a></li>
+                <li class="nav-item mb-2"><a href="actualiteshtml" class="nav-link p-0 text-muted">Actualités</a></li>
+                <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-muted">Contact</a></li>
+               
+                </ul>
+            </div>
+        
+            <div class="col mb-3 col-nav-links">
+                <h5>Le diabète</h5>
+                <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Le diabète</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Définition et signes</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Epidémiologie</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">causes</a></li>
+                
+                </ul>
+            </div>
+        
+            <div class="col mb-3 col-social-links">
+                <p><strong>Association Diab'Aide</strong></p>
+                <p><i class="fa-solid fa-location-dot"></i>8 rue du parc 78000</p>
+                <p><i class="fa-solid fa-phone"></i> 68 65 23 65 98</p>
+                <p><i class="fa-solid fa-at"></i>dia02@diabaide.com</p>
+                
+                <ul class="nav justify-content-start border-bottom pb-3 mb-3 nav-social-icons">
+                    <li class="ms-3"><a href="#"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li class="ms-3"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li class="ms-3"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                </ul>
+              
+            </div>
+            
+           
+            </footer>
+        </div>
+            
+                    
+        
+           <script src="script.js"></script>
+           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+    
+    </html>
+    
+    
+    
+    
+    
+     
+    
+    
+     
