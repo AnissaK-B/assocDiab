@@ -812,49 +812,31 @@ color: #023e8a;
   .container .contact-form {
     max-width: 400px;
     width: 100%;
-   
-    margin-left: 50%;
-    margin-right: 50%;
+    margin: 0 auto; /* Centre le formulaire horizontalement */
     position: relative;
-  }
-  
-  #contact input[type="text"],
-  #contact input[type="email"],
-  #contact input[type="tel"],
-  #contact input[type="url"],
-  #contact textarea,
-  #contact button[type="submit"] {
-    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
-  }
-  
-  #contact {
+}
+
+.contact-form {
     background: #F9F9F9;
     padding: 25px;
-    margin: 150px 0;
+    margin: 50px auto; /* Marge autour du formulaire */
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  }
-  
-  #contact h3 {
-    display: block;
+}
+
+#contact h3 {
     font-size: 30px;
     font-weight: 300;
     margin-bottom: 20px;
-    margin-top:15px;
-  }
-  
-  #contact h4 {
-    margin: 5px 0 15px;
-    display: block;
-    font-size: 13px;
-    font-weight: 400;
-  }
-  label{
-    border: medium none !important;
+    margin-top: 15px;
+}
+
+label {
     margin: 0 0 10px;
     min-width: 100%;
     padding: 0;
     width: 100%;
-  }
+}
+
   
   #contact input[type="text"],
   #contact input[type="email"],

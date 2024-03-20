@@ -23,7 +23,8 @@
                 <li><a href="actualites.html">Actualités</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul> <ul>
-                <li><a class="don" onclick="togglePopup()">Faites un don<i class="fa-solid fa-hand-holding"></i></a></li>
+                <li><button class="don" onclick="togglePopup()">Faites un don<i class="fa-solid fa-hand-holding"></i></button></li>
+
             </ul>
         
         </nav>
@@ -53,7 +54,8 @@
     
             <button type="submit">Payer</button>
         </form>
-        <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">fermer</a>
+        <button class="popup-exit" onclick="togglePopup()">Fermer</button>
+
         </div>
     </div>
     
@@ -68,7 +70,7 @@
                 <input placeholder="Adresse mail" type="email" tabindex="2" required>
             </label>
             <label>
-                <input placeholder="Téléphone(optionnel)" type="tel" tabindex="3" required>
+                <input placeholder="Téléphone" type="tel" tabindex="3" required>
             </label>
              
             <label>
